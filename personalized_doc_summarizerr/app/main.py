@@ -1,9 +1,9 @@
 from fastapi import FastAPI, UploadFile, Form
-from app.pdf_parser import extract_text_from_pdf
-from app.embedder import get_embeddings
-from app.vector_store import VectorStore
-from app.summarizer import create_prompt
-from app.llm_infer import query_ollama
+from app.services.pdf_parser import extract_text_from_pdf
+from app.services.embedder import get_embeddings
+from app.services.vector_store import VectorStore
+from app.services.summarizer import create_prompt
+from app.services.llm_infer import query_ollama
 import os, tempfile
 
 app = FastAPI()
