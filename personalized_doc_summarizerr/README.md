@@ -45,21 +45,30 @@ PDF → Extract → Embed → Vector Store → Prompt → Ollama → Summary
 ```bash
 git clone https://github.com/your-username/personalized-doc-summarizer.git
 cd personalized-doc-summarizer
+```
 
 ### 2. Install dependencies
 
+```bash
 pip install -r requirements.txt
+```
 
 ### 3. Start Ollama (on host)
 
+```bash
 ollama run mistral
+```
 
 ### 4. Run API
 
+```bash
 uvicorn app.main:app --reload
+```
 
 ### 5. Use it via curl
 
+```bash
 curl -X POST "http://localhost:8000/summarize" \
   -F "file=@app/pdf/sample.pdf" \
   -F "persona=Student"
+```
